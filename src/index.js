@@ -60,4 +60,4 @@ function main()
     }
 }
 
-main()
+main();
