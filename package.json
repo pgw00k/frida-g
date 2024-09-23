@@ -11,7 +11,7 @@
     "test:dev": "node ./src/index ./test/test.js -o wtest_g.js -w",
     "help": "node ./src/index -h",
     "prepare": "git submodule init && git submodule update",
-    "postinstall": "git clone https://github.com/pgw00k/FridaScript.git --depth 1"
+    "postinstall": "node scripts/postinstall.js"
   },
   "repository": {
     "type": "git",
