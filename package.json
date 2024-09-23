@@ -1,0 +1,26 @@
+{
+  "name": "frida-g",
+  "version": "1.0.0",
+  "description": "Frida scripts generate to one script.",
+  "main": "index.js",
+  "bin": {
+    "frida-g": ".src/index.js"
+  },
+  "scripts": {
+    "test": "node src/index ./test/test.js",
+    "test:dev":"node src/index ./test/test.js -o wtest_g.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgw00k/frida-g.git"
+  },
+  "author": "Wings",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pgw00k/frida-g/issues"
+  },
+  "homepage": "https://github.com/pgw00k/frida-g#readme",
+  "devDependencies": {
+    "yargs": "^17.7.2"
+  }
+}
