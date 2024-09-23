@@ -23,7 +23,7 @@
     "url": "https://github.com/pgw00k/frida-g/issues"
   },
   "homepage": "https://github.com/pgw00k/frida-g#readme",
-  "devDependencies": {
+  "dependencies": {
     "yargs": "^17.7.2"
   }
 }
