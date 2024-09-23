@@ -14,10 +14,11 @@ class fridaScriptLoader {
 
     constructor(filePath) {
         this.subScripts = [];
-        this.searchDirectories = [];
 
-        this.searchDirectories.concat(module.paths);
-        this.searchDirectories.push(path.dirname(path.resolve(filePath)))
+        let fileDir = path.dirname(path.resolve(filePath));
+
+        this.searchDirectories =[fileDir,path.join(fileDir,'node_modules')];
+        this.searchDirectories = this.searchDirectories.concat(module.paths);
 
         this.text = fs.readFileSync(filePath, 'utf8');
         this.text = this.text.replace(fridaScriptLoader.regexImport, this.importOtherJavaScript.bind(this));
