@@ -10,7 +10,8 @@
     "test": "node ./src/index ./test/test.js",
     "test:dev": "node ./src/index ./test/test.js -o wtest_g.js -w",
     "help": "node ./src/index -h",
-    "prepare": "git submodule init && git submodule update"
+    "prepare": "node scripts/prepare.js",
+    "postinstall": "node scripts/postinstall.js"
   },
   "repository": {
     "type": "git",
