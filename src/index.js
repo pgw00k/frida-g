@@ -1,7 +1,9 @@
-const fridaScriptLoader = require('./fridaScriptLoader');
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const yargs = require('yargs');
+const fridaScriptLoader = require('./fridaScriptLoader');
 
 const argv =  yargs
 .option('output', {
@@ -18,6 +20,10 @@ const argv =  yargs
     default:false
 })
 .help()
+.alias('help','h')
+.fail((msg,err,arg_ins)=>{
+
+})
 .argv;
 
 function build(inputPath,outputPath)
@@ -33,6 +39,7 @@ function main()
     if(!inputPath || !fs.existsSync(inputPath))
     {
         console.error(`File is not exist or null input!`);
+        yargs.showHelp();
         return -1;
     }
     
