@@ -6,13 +6,6 @@
   "bin": {
     "frida-g": "./src/index.js"
   },
-  "scripts": {
-    "test": "node ./src/index ./test/test.js",
-    "test:dev": "node ./src/index ./test/test.js -o wtest_g.js -w",
-    "help": "node ./src/index -h",
-    "prepare": "node scripts/prepare.js",
-    "postinstall": "node scripts/postinstall.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pgw00k/frida-g.git"

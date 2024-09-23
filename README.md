@@ -4,8 +4,9 @@ Frida script generator,multiple scripts combind to one.
 # Usage
 
 ## include filename
+The `import` must be single line.
 ```javascript
-include('../FridaScript/BaseHook.js');
+import '../FridaScript/BaseHook.js';
 ```
 ## Combine
 `frida-g <entry script> [options]`
